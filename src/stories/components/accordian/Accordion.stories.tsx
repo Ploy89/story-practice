@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react/types-6-0'
-import React from 'react'
+import React,{FC} from 'react'
 import { Accordion,AccordionProps } from './Accordion'
 
 export default {
@@ -17,7 +17,7 @@ export default {
   },
 }
 
-const AccordionStory = ({ ...args }) => <Accordion {...args} />
+const AccordionStory: FC{AccordianProps} = ({ ...args }) => <Accordion {...args} />
 
 export const BasicAccordion: Story = AccordionStory.bind({})
 BasicAccordion.args = {
